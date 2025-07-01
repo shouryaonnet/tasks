@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f2f2f2;
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+#search {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+#product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+#load-more {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+}
