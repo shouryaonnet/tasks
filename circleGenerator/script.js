@@ -27,7 +27,6 @@ container.addEventListener("click", function(event) {
   circle.style.left = (event.clientX - 25) + "px";
   circle.style.top = (event.clientY - 25) + "px";
   circle.style.backgroundColor = getRandomColor();
-
   container.appendChild(circle);
   createdCircles.push(circle);
   removedCircles = [];
