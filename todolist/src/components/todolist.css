@@ -142,6 +142,6 @@
 }
 
 .todo-delete-btn:hover {
-  background: #22223b; /* greyish black */
+  background: #22223b;
   transform: scale(1.09);
 }

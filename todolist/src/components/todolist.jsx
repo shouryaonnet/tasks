@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  React, { useState } from "react";
 import "./todolist.css";
 
 function TodoList() {
@@ -25,46 +25,45 @@ function TodoList() {
   }
 
   return (
-    <div className="todo-container">
-      <div className="todo-heading">
-        <h2>To Do List</h2>
-      </div>
-      <div className="todo-input-row">
-        <input
-          className="todo-input"
-          type="text"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          placeholder="Add a new task..."
-        />
-        <button className="todo-add-btn" onClick={addItem}>
-          Add
-        </button>
-      </div>
-      <div className="todo-table">
-        <div className="todo-table-header">
-          <span>Work Name</span>
-          <span>Task State</span>
-          <span>Done?</span>
-          <span>Delete</span>
+
+      <div className="todo-container">
+        <div className="todo-heading">
+          <h2>To Do List</h2>
         </div>
-        {items.map((item, i) => (
-          <div className="todo-table-row" key={i}>
-            <span>{item.name}</span>
-            <span>{item.done ? "Completed" : "Pending"}</span>
-            <input
-              type="checkbox"
-              checked={item.done}
-              disabled={item.done}
-              onChange={() => toggleDone(i)}
-            />
-            <button className="todo-delete-btn" onClick={() => deleteItem(i)}>
-              Delete
-            </button>
+        <div className="todo-input-row">
+          <input
+            className="todo-input"
+            type="text"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            placeholder="Add a new task..." />
+          <button className="todo-add-btn" onClick={addItem}>
+            Add
+          </button>
+        </div>
+        <div className="todo-table">
+          <div className="todo-table-header">
+            <span>Work Name</span>
+            <span>Task State</span>
+            <span>Done?</span>
+            <span>Delete</span>
           </div>
-        ))}
+          {items.map((item, i) => (
+            <div className="todo-table-row" key={i}>
+              <span>{item.name}</span>
+              <span>{item.done ? "Completed" : "Pending"}</span>
+              <input
+                type="checkbox"
+                checked={item.done}
+                disabled={item.done}
+                onChange={() => toggleDone(i)} />
+              <button className="todo-delete-btn" onClick={() => deleteItem(i)}>
+                Delete
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
   );
 }
 
